@@ -10,12 +10,27 @@ html(lang="en")
         header 
             h1 Noom
         main
-            ul
-            form#nick
-                input(type="text", placeholder="닉네임", required)
-                button 저장
-            form#msg
-                input(type="text", placeholder="메세지를 입력하세요", required)
-                button 전송
+            video#myFace(autoplay,playsinline,width="400",height="400")
+            button#mute 소리 끄기
+            button#camera 카메라 끄기
 
+
+            //- Chat Rooms
+            //- div#welcome
+            //-     form
+            //-         input(placeholder="방 이름", required, type="text")
+            //-         button 방 입장
+            //-     h4 방 목록
+            //-     ul
+            //- div#room
+            //-     h4
+            //-     h3
+            //-     ul
+            //-     form#msg
+            //-         input(placeholder="메세지를 입력하세요", required, type="text")
+            //-         button 전송
+            //-     form#nick
+            //-         input(placeholder="님네임을 입력하세요", required, type="text")
+            //-         button 저장
+        script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
