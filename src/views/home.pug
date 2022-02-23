@@ -10,11 +10,21 @@ html(lang="en")
         header 
             h1 Noom
         main
-            video#myFace(autoplay,playsinline,width="400",height="400")
-            button#mute 소리 끄기
-            button#camera 카메라 끄기
-
-
+            div#welcome
+                form
+                    input(placeholder="방 제목", required, type="text")
+                    button Enter
+            div#call
+                div#myStream
+                    video#myFace(autoplay,playsinline,width="400",height="400")
+                    button#mute 소리 끄기
+                    button#camera 카메라 끄기
+                    select#cameras 카메라 선택
+                div#peer_div
+                    video#peerFace(autoplay,playsinline,width="400",height="400")
+                    button#mute 소리 끄기
+                    button#camera 카메라 끄기
+                    select#cameras 카메라 선택
             //- Chat Rooms
             //- div#welcome
             //-     form
