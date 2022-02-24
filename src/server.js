@@ -24,7 +24,9 @@ const io = new Server(httpServer);
 io.on("connection", socket => {
 
     socket.on("join_room", (roomName)=> {
+        console.log("server: join room");
         socket.join(roomName);
+        // socket.to는 나 자신socket을 제외한 소켓에게.
         socket.to(roomName).emit("welcome");
     });
 
