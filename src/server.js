@@ -13,7 +13,8 @@ app.set("view engine", "pug");
 app.set("views", __dirname + "/src/views");
 app.use("/public", express.static(__dirname + "/src/public"));
 app.get("/", (req, res) => res.render("home"));
-app.get("/*", (req, res) => res.redirect("/"));
+app.get("/chat", (req, res) => res.render("chat"));
+// app.get("/*", (req, res) => res.redirect("/"));
 
 const handleListen = () => console.log("Listening on http://localhost:3000");
 
