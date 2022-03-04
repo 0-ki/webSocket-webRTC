@@ -19,13 +19,11 @@ html(lang="en")
             div#call
                 div#myStream
                     video#myFace(autoplay,playsinline,width="400",height="400")
-                    audio#myVoice(preload ,autoplay,controls,loop ,width="40",height="40" src="1.mp3")
                     button#mute 소리 끄기
                     button#camera 카메라 끄기
                     select#cameras 카메라 선택
                 div#peer_div
                     video#peerFace(autoplay,playsinline,width="400",height="400")
-                    audio#peerVoice(autoplay,controls,loop ,width="40",height="40")
                     button#mute 소리 끄기
                     button#camera 카메라 끄기
                     select#cameras 카메라 선택
@@ -47,4 +45,4 @@ html(lang="en")
             //-         input(placeholder="님네임을 입력하세요", required, type="text")
             //-         button 저장
         script(src="/socket.io/socket.io.js")
-        script(src="/public/js/audio_app.js")
+        script(src="/public/js/app.js")
